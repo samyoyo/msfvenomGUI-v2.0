@@ -12,6 +12,7 @@ try:
         os.system("cp msfvenomGUIv2.0.py /opt/msfvenomGUI/")
         os.system("chmod +x msfvenomGUI")
         os.system("cp msfvenomGUI /usr/bin/")
+        print("write in Terminal =>> msfvenomGUI")
     elif number == 2:
         os.system("yum install python-pyside pyside-tools")
         os.system("yum install PyQt4")
@@ -19,6 +20,7 @@ try:
         os.system("cp msfvenomGUIv2.0.py /opt/msfvenomGUI/")
         os.system("chmod +x msfvenomGUI")
         os.system("cp msfvenomGUI /usr/bin/")
+        print("write in Terminal =>> msfvenomGUI")
 except KeyboardInterrupt:
     print ("\t\tBye")
 
